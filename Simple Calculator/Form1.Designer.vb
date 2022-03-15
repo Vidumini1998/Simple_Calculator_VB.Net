@@ -22,37 +22,39 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtNum1 = New System.Windows.Forms.TextBox()
+        Me.txtNum2 = New System.Windows.Forms.TextBox()
+        Me.txtResult = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtNum1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(26, 62)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox1.TabIndex = 0
+        Me.txtNum1.Location = New System.Drawing.Point(26, 62)
+        Me.txtNum1.Name = "txtNum1"
+        Me.txtNum1.Size = New System.Drawing.Size(121, 22)
+        Me.txtNum1.TabIndex = 0
         '
-        'TextBox2
+        'txtNum2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(26, 130)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox2.TabIndex = 1
+        Me.txtNum2.Location = New System.Drawing.Point(26, 130)
+        Me.txtNum2.Name = "txtNum2"
+        Me.txtNum2.Size = New System.Drawing.Size(121, 22)
+        Me.txtNum2.TabIndex = 1
         '
-        'TextBox3
+        'txtResult
         '
-        Me.TextBox3.Location = New System.Drawing.Point(26, 204)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox3.TabIndex = 2
+        Me.txtResult.Location = New System.Drawing.Point(26, 204)
+        Me.txtResult.Name = "txtResult"
+        Me.txtResult.ReadOnly = True
+        Me.txtResult.Size = New System.Drawing.Size(121, 22)
+        Me.txtResult.TabIndex = 2
         '
         'Label1
         '
@@ -84,6 +86,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Add ", "Subtract", "Multiply", "Divide"})
         Me.ComboBox1.Location = New System.Drawing.Point(204, 62)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
@@ -91,9 +94,9 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(204, 130)
+        Me.Button1.Location = New System.Drawing.Point(204, 112)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(121, 58)
+        Me.Button1.Size = New System.Drawing.Size(121, 51)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Calculate"
         Me.Button1.UseVisualStyleBackColor = True
@@ -107,20 +110,30 @@ Partial Class Form1
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Choose Operation:"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(204, 184)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(121, 48)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "About"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(356, 266)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtResult)
+        Me.Controls.Add(Me.txtNum2)
+        Me.Controls.Add(Me.txtNum1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -130,13 +143,14 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtNum1 As TextBox
+    Friend WithEvents txtNum2 As TextBox
+    Friend WithEvents txtResult As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents Button2 As Button
 End Class
